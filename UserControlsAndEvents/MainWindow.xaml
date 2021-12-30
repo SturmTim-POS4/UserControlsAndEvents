@@ -4,9 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserControlsAndEvents"
+        xmlns:equalizer="clr-namespace:Equalizer;assembly=UserControlLib"
+        xmlns:trackControl="clr-namespace:TrackControl;assembly=UserControlLib"
         mc:Ignorable="d"
+        Loaded="MainWindow_OnLoaded"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <trackControl:TrackControl Name="tcBLue" Min="0" Max="100" TextboxBackground="Blue"></trackControl:TrackControl>
+        
+        <equalizer:Equalizer Margin="20" Name="eqlOragne" Val="38" Grid.Column="1" Grid.RowSpan="2" BarForeground="Orange"></equalizer:Equalizer>
+        
+        <equalizer:Equalizer Name="eqlRed" Val="38" Grid.Column="2" Grid.RowSpan="2" BarForeground="Red"></equalizer:Equalizer>
+        
+        <trackControl:TrackControl Name="tcGreen" Grid.Row="1" Min="0" Max="50" TextboxBackground="Green"></trackControl:TrackControl>
+        <trackControl:TrackControl Name="tcHigh" Grid.Row="2" Grid.ColumnSpan="3" Min="0" Max="1000"></trackControl:TrackControl>
+        <ProgressBar Name="pbValueBar" Minimum="0" Maximum="100" Margin="5,30" Grid.Row="4" Grid.ColumnSpan="2"></ProgressBar>
+        <Image Name="imageArrow" Margin="5,30" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Source="arrow_down.png"></Image>
+        <Label Name="lblValue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,30" Grid.Row="4" Grid.Column="2"></Label>
     </Grid>
 </Window>

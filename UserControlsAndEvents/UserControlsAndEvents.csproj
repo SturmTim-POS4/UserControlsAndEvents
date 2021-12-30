@@ -7,4 +7,18 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Equalizer\Equalizer.csproj" />
+      <ProjectReference Include="..\UserControlLib\UserControlLib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="arrow_down.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="arrow_up.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

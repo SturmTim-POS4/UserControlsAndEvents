@@ -88,6 +88,7 @@ namespace TrackControl
             set
             {
                 _title = value;
+                gbTrack.Header = _title;
             }
         }
         

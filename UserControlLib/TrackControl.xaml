@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:TrackControl"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="800">
+    <GroupBox Name="gbTrack">
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
@@ -24,4 +26,5 @@
         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Right"  Grid.Row="1" Name="lblMax" Grid.Column="1"></Label>
         <Label Grid.Row="1" Name="lblCurrent" Grid.Column="2"></Label>
     </Grid>
+    </GroupBox>
 </UserControl>
